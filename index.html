@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>تحلیلگر صدای سرفه</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="logo">🫁</div>
+      <div>
+        <h1>تحلیلگر صدای سرفه</h1>
+        <p>نسخه آموزشی و غیرتشخیصی</p>
+      </div>
+    </header>
+
+    <section class="notice">
+      <b>توجه:</b> این برنامه از روی صدای سرفه بیماری را تشخیص نمی‌دهد و جای پزشک را نمی‌گیرد.
+      نتیجه فقط یک تحلیل صوتی تقریبی برای پروژه آموزشی است.
+    </section>
+
+    <section class="card">
+      <h2>۱) ضبط سرفه</h2>
+      <p id="status">برای شروع روی «شروع ضبط» بزن.</p>
+      <div class="timer" id="timer">00:00</div>
+      <div class="buttons">
+        <button id="start">🎙️ شروع ضبط</button>
+        <button id="stop" disabled>⏹️ توقف</button>
+        <button id="analyze" disabled>🔎 تحلیل صدا</button>
+      </div>
+      <audio id="player" controls hidden></audio>
+    </section>
+
+    <section class="card" id="resultCard" hidden>
+      <h2>۲) نتیجه تحلیل</h2>
+      <div class="result">
+        <div class="score" id="score">—</div>
+        <div>
+          <h3 id="pattern">در انتظار تحلیل</h3>
+          <p id="description"></p>
+        </div>
+      </div>
+      <div class="features">
+        <div><span>شدت تقریبی</span><b id="loudness">—</b></div>
+        <div><span>تعداد بخش‌های صوتی</span><b id="events">—</b></div>
+        <div><span>مدت ضبط</span><b id="duration">—</b></div>
+      </div>
+      <div class="care">
+        <h3>مراقبت عمومی</h3>
+        <p id="careText"></p>
+      </div>
+      <div class="warning">
+        اگر تنگی نفس، درد قفسه سینه، کبودی لب‌ها، خون‌ریزی، بدحال شدن شدید یا علائم نگران‌کننده وجود دارد، به‌جای تکیه بر این برنامه از یک بزرگسال قابل اعتماد و خدمات پزشکی کمک بگیر.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>چطور استفاده کنم؟</h2>
+      <ol>
+        <li>در محیط نسبتاً ساکت اجازه دسترسی به میکروفون را بده.</li>
+        <li>دکمه شروع ضبط را بزن و چند بار طبیعی سرفه کن.</li>
+        <li>توقف و سپس تحلیل صدا را بزن.</li>
+        <li>نتیجه را فقط به‌عنوان تحلیل آموزشی در نظر بگیر.</li>
+      </ol>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
